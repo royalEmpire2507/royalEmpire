@@ -89,32 +89,4 @@ class UserCRMController extends Controller
             return response()->json(['result' => 'error','module'=>$ex->getMessage()]);
         }
     }
-
-    public function editLastConection()
-    {
-        $usuario = Session::get('user');
-        $ultimaConexion = $usuario->wolkvox_last_connection;
-        $diffMinutos = '';
-        if($ultimaConexion !== null && $ultimaConexion !== ''){
-            $ucFormat = (
-                new \DateTime(
-                    $usuario->wolkvox_last_connection->toDateTime()->format('Y-m-d H:i:s.u'),
-                    new \DateTimeZone('UTC'))
-                )->format('Y-m-d H:i:s');
-                        
-            $fecha1 = Carbon::now();
-            $fecha2 = Carbon::parse($ucFormat);
-    
-            $diffMinutos = $fecha1->diffInMinutes($fecha2);
-        }
-
-        if ($ultimaConexion === null || $ultimaConexion === '' || $diffMinutos >= 15) {
-            Log::info("edito fecha pasados ".$diffMinutos." min., colocó ".Carbon::now());
-            $id = Auth::id();
-            User::where('_id', $id)
-                ->update(
-                    ['wolkvox_last_connection'=>new UTCDateTime(Carbon::now()->timestamp * 1000)]
-                );
-        }
-    }
 }

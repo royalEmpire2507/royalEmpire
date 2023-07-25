@@ -15,9 +15,9 @@ return [
     */
 
     'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN', 'email.wolkvox.com'),
-        'secret' => env('MAILGUN_SECRET', 'key-7eef6ddda53a6b0c7f930a149d2ca311'),
-        'endpoint' => env('MAILGUN_ENDPOINT', 'https://api.mailgun.net/v3'),
+        'domain' => env('MAILGUN_DOMAIN'),
+        'secret' => env('MAILGUN_SECRET'),
+        'endpoint' => env('MAILGUN_ENDPOINT'),
     ],
 
     'postmark' => [

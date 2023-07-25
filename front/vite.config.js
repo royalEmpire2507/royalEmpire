@@ -9,7 +9,6 @@ import vueI18n from '@intlify/vite-plugin-vue-i18n'
 export default defineConfig({
   root: process.cwd(),
   base: '/',
-  // base: '/crmvox/frontend/',
   plugins: [
     vue({
       template: {

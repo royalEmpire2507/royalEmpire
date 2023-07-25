@@ -54,47 +54,6 @@ return [
                 'appname' => 'homestead',
             ],
         ],
-       
-        'mongodbLog' => [
-            'driver' => 'mongodb',
-            'host' => 'localhost',
-            'port' => 27017,
-            'database' => 'wolkvoxLogs',
-            'username' => '',
-            'password' => '',
-            'options' => [
-                'appname' => 'homestead',
-            ],
-        ],
-
-        'mysqlFac' => [
-            'driver' => 'mysql',
-            'host' => env('DB_HOST_FC', '104.196.128.241'),
-            'port' => env('DB_PORT_FC', '3306'),
-            'database' => env('DB_DATABASE_FC', 'ipdialbox'),
-            'username' => env('DB_USERNAME_FC', 'ipdialbox_fac'),
-            'password' => env('DB_PASSWORD_FC', 'ipdialbox_fac123789'),
-            'unix_socket' => env('DB_SOCKET_FC', ''),
-            'charset' => 'utf8mb4',
-            'options' => extension_loaded('pdo_mysql') ? array_filter([
-                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-                PDO::ATTR_TIMEOUT => 5,
-            ]) : [],
-        ],
-
-        'mysqlChat' => [
-            'driver' => 'mysql',
-            'host' => env('DB_HOST1', '35.185.59.179'),
-            'port' => env('DB_PORT1', '3306'),
-            'database' => env('DB_DATABASE1', 'ipdialboxchat'),
-            'username' => env('DB_USERNAME1', 'wv_chat'),
-            'password' => env('DB_PASSWORD1', '_{cU(@>lq|]B[St'),
-            'unix_socket' => env('DB_SOCKET1', ''),
-            'charset' => 'utf8',
-            'options' => extension_loaded('pdo_mysql') ? array_filter([
-                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-            ]) : [],
-        ],
 
         'pgsql' => [
             'driver' => 'pgsql',
