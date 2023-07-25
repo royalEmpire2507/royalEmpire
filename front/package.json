@@ -8,8 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint:eslint": "eslint --ext .ts,.vue ./src",
-    "host": "vite --host",
-    "start": "vite"
+    "start": "vite --port 8000"
   },
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^35.4.0",
