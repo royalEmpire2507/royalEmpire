@@ -30,4 +30,7 @@ export default defineConfig({
     minify: true,
     chunkSizeWarningLimit: 4600,
   },
+  server: {
+    host: true
+  }
 })
